@@ -6,7 +6,7 @@ class GitlabConfig
 
   def initialize
     config_file = File.join(ROOT_PATH, 'config.yml')
-    @config = YAML.load(ERB.new'(File.read(config_file)).result)
+    @config = YAML.load(ERB.new(File.read(config_file)).result)
   end
 
   def repos_path
